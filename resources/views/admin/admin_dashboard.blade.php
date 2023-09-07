@@ -42,7 +42,7 @@
                   <li>
                     <p>{{ $value->category_name }}</p>
                     @if(count($value->childs))
-                    @include('admin.manageChild',['childs' => $value->childs])
+                      @include('admin.manageChild',['childs' => $value->childs])
                     @endif
                   </li>
                   @endforeach
