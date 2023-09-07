@@ -12,11 +12,20 @@ class UserController extends Controller
 {
     public $userService;
 
+    /**
+     * automatic load when class object create
+     *
+     */
     public function __construct()
     {
         $this->userService = new UserService();
     }
 
+    
+    /**
+     * show user dashboard
+     *
+     */
     public function dashboard()
     {
         $userResponse = $this->userService->getAllUser();

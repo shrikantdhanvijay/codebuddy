@@ -7,6 +7,11 @@ use App\Models\User;
 
 class UserService
 {
+    /**
+     * get all user list 
+     *
+     * @return category
+     */
     public function getAllUser()
     {
         return User::orderby('id', 'desc')->get();

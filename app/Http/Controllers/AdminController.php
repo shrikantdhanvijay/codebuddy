@@ -13,11 +13,19 @@ class AdminController extends Controller
 
     public $categoryService;
 
+    /**
+     * automatic load when class object create
+     *
+     */
     public function __construct()
     {
         $this->categoryService = new CategoryService();
     }
 
+    /**
+     * show admin dashboard
+     *
+     */
     public function dashboard()
     {
         $categoryResponse = $this->categoryService->getParentCategory();

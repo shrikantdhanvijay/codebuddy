@@ -13,21 +13,33 @@ class CategoryController extends Controller
 {
     public $categoryService;
 
+    
+    /**
+     * automatic load when class object create
+     *
+     */
     public function __construct()
     {
         $this->categoryService = new CategoryService();
     }
 
+    /**
+     * show category listing page
+     *
+     */
     public function category() {
 
         $categoryResponse = $this->categoryService->getAllCategory();
-// dd($categoryResponse);
         return view('admin.category')->with([
             "category" => $categoryResponse
         ]);
 
     }
 
+    /**
+     * add category
+     *
+     */
     public function addCategory() {
         try {
 
@@ -44,6 +56,12 @@ class CategoryController extends Controller
 
     }
 
+    /**
+     * get category detail by id
+     *
+     * @param  mixed $id
+     * @return category
+     */
     public function editCategory($id) {
         try {
 
@@ -61,6 +79,11 @@ class CategoryController extends Controller
 
     }
 
+    
+    /**
+     * save category 
+     *
+     */
     public function saveCategory(Request $request) {
         try {
            
@@ -86,6 +109,11 @@ class CategoryController extends Controller
 
     }
 
+    
+    /**
+     * delete category 
+     *
+     */
     public function deleteCategory(Request $request)
     {
         $returnArr = array();

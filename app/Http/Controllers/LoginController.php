@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
+    
+    /**
+     * show login screen
+     *
+     */
     public function login() {
         if (Auth::check()) {
             if (auth()->user()->is_admin == 1) {
@@ -23,8 +28,11 @@ class LoginController extends Controller
         return view('admin.login');
     }
 
+    /**
+     * get login credentials and verify and jump dashboard
+     *
+     */
     public function authenticate(Request $request) {
-        
         
         $validator = Validator::make($request->all(), [
                     'email' => 'required|email',
@@ -49,12 +57,10 @@ class LoginController extends Controller
         }
     }
 
-    public function adminDashboard() {
-        return view('admin.admin_dashboard');
-    }
-
-   
-    
+     /**
+     * logout session
+     *
+     */
     public function logout() {
         Auth::logout();
         return redirect('/login');

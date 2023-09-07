@@ -7,7 +7,12 @@ use App\Models\Category;
 
 class CategoryService
 {
-
+    
+    /**
+     * get parent category
+     *
+     * @return category
+     */
     public function getParentCategory()
     {
         return Category::where('parent_id', '=', 0)->get();
@@ -58,11 +63,21 @@ class CategoryService
     }
 
 
+    /**
+     * get  category list on key value pair
+     *
+     * @return category
+     */
     public function categoryList()
     {
         return Category::whereNull('deleted_at')->pluck('category_name', 'id');
     }
 
+     /**
+     * delete category form table on bases of id
+     *
+     * @return category
+     */
     public function deleteCategory($data)
     {
         return Category::where('id', $data->id)->delete();

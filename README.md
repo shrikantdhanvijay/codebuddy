@@ -62,3 +62,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 admin login : admin@gmail.com/12345
 user login : user@gmail.com/12345"# codebuddy" 
+
+
+
+admin login : admin@gmail.com/12345
+user login : user@gmail.com/12345
