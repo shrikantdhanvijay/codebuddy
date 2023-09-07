@@ -1,7 +1,7 @@
 <?php
-  
+
 namespace App\Models;
-  
+
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-  
+
 class Category extends Model
 {
     use SoftDeletes;
@@ -28,16 +28,19 @@ class Category extends Model
 
     public function getParentCategoryName(): BelongsTo
     {
-        return $this->belongsTo('App\Models\Category', 'parent_id', 'id')->withTrashed();
+        return $this->belongsTo(Category::class, 'parent_id', 'id')->withTrashed();
     }
-    
- 
+
+
+    public function childs()
+    {
+        return $this->hasMany(Category::class, 'parent_id', 'id');
+    }
+
 
     public function parentSubCategory(): HasMany
     {
-        return $this->hasMany(Category::class,'parent_id','id')
-                            ->select('id','parent_id','category_name');
-                         
+        return $this->hasMany(Category::class, 'parent_id', 'id')
+            ->select('id', 'parent_id', 'category_name');
     }
-   
 }

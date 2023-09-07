@@ -18,14 +18,11 @@ class AdminController extends Controller
         $this->categoryService = new CategoryService();
     }
 
-    public function dashboard() {
-        $categoryResponse = $this->categoryService->getAllParentsCategory();
-        // echo '<pre>'; print_r($categoryResponse->toArray()); exit('in c');
+    public function dashboard()
+    {
+        $categoryResponse = $this->categoryService->getParentCategory();
         return view('admin.admin_dashboard')->with([
             "category" => $categoryResponse
         ]);
-
     }
-  
-
 }

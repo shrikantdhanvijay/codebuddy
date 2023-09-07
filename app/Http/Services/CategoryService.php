@@ -8,10 +8,9 @@ use App\Models\Category;
 class CategoryService
 {
 
-    
-    public function getAllParentsCategory()
+    public function getParentCategory()
     {
-        return Category::with('parentSubCategory')->where('parent_id', 0)->orderby('id', 'desc')->get();
+        return Category::where('parent_id', '=', 0)->get();
     }
 
     /**
@@ -43,16 +42,16 @@ class CategoryService
      */
     public function saveCategory($data)
     {
-        
+
         $categoryObj = new Category();
-        if(!empty($data->id)){
+        if (!empty($data->id)) {
             $categoryObj->id = $data->id;
             $categoryObj->exists  = true;
         }
-        if(!empty($data->parent_id)){
+        if (!empty($data->parent_id)) {
             $categoryObj->parent_id = $data->parent_id;
         }
-        
+
         $categoryObj->category_name = $data->category_name;
         $response =  $categoryObj->save();
         return $response;
@@ -66,10 +65,6 @@ class CategoryService
 
     public function deleteCategory($data)
     {
-        return Category::where('id',$data->id)->delete();
+        return Category::where('id', $data->id)->delete();
     }
-
-    
-    
-
 }

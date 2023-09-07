@@ -40,16 +40,10 @@
                 <ul>
                   @foreach($category as $key => $value)
                   <li>
-                      <p>{{ $value->category_name }}</p>
-                    <ul>
-                      @if(count($value->parentSubCategory) > 0)
-                          @foreach($value->parentSubCategory as $key1 => $value1)
-                          <li>
-                            <p>{{ $value1->category_name }}</p>
-                          </li>
-                          @endforeach
-                        @endif
-                    </ul>
+                    <p>{{ $value->category_name }}</p>
+                    @if(count($value->childs))
+                    @include('admin.manageChild',['childs' => $value->childs])
+                    @endif
                   </li>
                   @endforeach
                 </ul>
