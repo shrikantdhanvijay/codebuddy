@@ -1,0 +1,117 @@
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.show_inline{
+    display: inline;
+}
+
+.marginroles
+{
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+}
+
+.listtypenone
+{
+    list-style-type: none !important;
+}
+
+.red-text{
+    color:red;
+}
+
+.btn:active:focus, .btn:focus {
+    outline: none  !important;
+    outline: none  !important;
+    outline-offset: none  !important;
+}
+
+.btn.active:focus, .btn:active:focus, .btn:focus {
+    outline: none !important;
+    outline:none !important;
+    outline-offset: none !important;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #920337;
+    background-color: #920337;
+}
+
+.app-content {
+     margin-top: 0px !important; 
+}
+
+.side-menu__item.active {
+    background: linear-gradient(to bottom right, #dc222f 0%, rgb(225 123 137) 100%) !important;
+}
+
+.side-menu__item.active:hover, .side-menu__item.active:focus {
+    background: linear-gradient(to bottom right, #dc222f 0%, rgb(225 123 137) 100%) !important;
+}
+
+.side-menu__item:hover, .side-menu__item:focus {
+    color: #db202d !important;
+}
+
+.page-item.active .page-link {
+    color: #fff;
+    background-color: #db202d !important;
+    border-color: #db202d !important;
+}
+
+.bg-primary-gradient {
+    background: linear-gradient(to bottom right, #dd313e 0%, rgb(224 102 116) 100%) !important;
+}
+
+.form-check-input:checked {
+    background-color: #db1f2d;
+    border-color: #de363f;
+}
+
+.btn-success {
+    color: #fff;
+    background: #dd2e3a !important;
+    border-color: #f0b1b3;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #e24e58;
+    color: white;
+}
+
+.btn-custom {
+    color: #fff;
+    background: #878787 !important;
+    border-color: #ffffff;
+}
+
+.footer a:not(.btn) {
+    color: #db212e !important;
+}
+
+.breadcrumb .breadcrumb-item.active {
+    color: #db1f2d !important;
+}
+
+.slide-item.active, .slide-item:hover, .slide-item:focus {
+    text-decoration: none;
+    color: #db212e !important;
+}
+
+.side-menu__item:hover .side-menu__icon, .side-menu__item:hover .side-menu__label, .side-menu__item:focus .side-menu__icon, .side-menu__item:focus .side-menu__label {
+    color: #db1f2d !important;
+}
+
+.list-btn-line-height {
+    line-height: 1 !important;
+}
+
+.error {
+    color: #F00;
+    background-color: #FFF;
+  }
