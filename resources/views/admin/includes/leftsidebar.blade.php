@@ -49,6 +49,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a href="{{ route('/user-dashboard') }}" class="nav-link ">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Vivek Dashboard</p>
+                    </a>
+                </li>
+
                 @if(auth()->user()->is_admin == 1)
                 <li class="nav-item">
                     <a href="{{ route('/category') }}" class="nav-link ">
@@ -61,7 +68,14 @@
                 <li class="nav-item">
                     <a href="{{ route('/logout') }}" class="nav-link ">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Logout</p>
+                        <p>Overwrite Logout</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('/logout') }}" class="nav-link ">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Vivek Logout</p>
                     </a>
                 </li>
             </ul>
