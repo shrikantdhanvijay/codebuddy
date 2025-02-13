@@ -49,13 +49,6 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="{{ route('/user-dashboard') }}" class="nav-link ">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>shrikant Dashboard</p>
-                    </a>
-                </li>
-
                 @if(auth()->user()->is_admin == 1)
                 <li class="nav-item">
                     <a href="{{ route('/category') }}" class="nav-link ">
