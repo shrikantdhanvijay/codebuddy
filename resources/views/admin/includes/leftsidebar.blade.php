@@ -78,6 +78,13 @@
                         <p>Vivek Logout</p>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('/logout') }}" class="nav-link ">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Vivek-2 Logout</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
